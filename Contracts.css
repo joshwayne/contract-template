@@ -1,0 +1,137 @@
+* {
+  -webkit-print-color-adjust: exact;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  color: #555;
+  font-family: "PT Serif", Times New Roman, serif;
+  font-size: 14px;
+  line-height: 1.52em;
+  margin: 10px auto;
+  max-width: 580px;
+  padding: 2.5% 5%;
+}
+table {
+  border-collapse: collapse;
+  margin: 10px 0 15px 0;
+}
+td,th {
+  border: 1px solid #ddd;
+  padding: 3px 10px;
+}
+th {
+  padding: 5px 10px;
+}
+
+a {
+  color: #0069d6;
+}
+a:hover {
+  color: #0050a3;
+  text-decoration: none;
+}
+a img {
+  border: none;
+}
+p {
+  margin-bottom: 1.52em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #404040;
+  font-family: "Montserrat", Gotham, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin-bottom: 0.8em;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.4em;
+  line-height: 1.52em;
+  margin-top: 1.7em;
+}
+h3 {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+hr {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 5em 0 0.7em;
+}
+hr + p { /* For placing the date inline with signature */
+  float: right;
+  margin: -2.45em 0 0;
+  width: 30%;
+}
+sup {
+  font-size: 0.83em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+@media screen and (min-width: 914px) {
+  body {
+    margin:10px auto;
+    width: 854px;
+  }
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+  }
+  table, pre {
+    page-break-inside: avoid;
+  }
+  body {
+    margin: 0;
+    max-width: 40em;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  h3 + p {
+    page-break-before: avoid;
+  }
+  a:link,
+  a:visited {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  a:link:after,
+  a:visited:after {
+    content: " (" attr(href) ") ";
+    font-size: 90%;
+  }
+}
